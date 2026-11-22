@@ -1,0 +1,21 @@
+seed,model,n_twins,rmse_twins,rmse_no_twin
+1,XGBoost,46,0.43,0.642
+1,XGBoost (9 descriptors),46,0.462,0.759
+2,XGBoost,50,0.455,0.668
+2,XGBoost (9 descriptors),50,0.516,0.783
+3,XGBoost,49,0.422,0.646
+3,XGBoost (9 descriptors),49,0.388,0.73
+4,XGBoost,54,0.377,0.571
+4,XGBoost (9 descriptors),54,0.43,0.751
+5,XGBoost,55,0.416,0.604
+5,XGBoost (9 descriptors),55,0.459,0.77
+6,XGBoost,55,0.439,0.705
+6,XGBoost (9 descriptors),55,0.412,0.731
+7,XGBoost,46,0.315,0.675
+7,XGBoost (9 descriptors),46,0.385,0.777
+8,XGBoost,52,0.441,0.696
+8,XGBoost (9 descriptors),52,0.432,0.834
+9,XGBoost,42,0.485,0.63
+9,XGBoost (9 descriptors),42,0.481,0.735
+10,XGBoost,48,0.406,0.67
+10,XGBoost (9 descriptors),48,0.455,0.787

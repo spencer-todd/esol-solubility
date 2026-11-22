@@ -1,0 +1,21 @@
+seed,feature_set,alpha,lasso_rmse,ridge_rmse,zero_weights,weights,iterations
+1,9 descriptors,0.01,0.9565,0.9576,0,9,65
+1,descriptors + fingerprints,0.0032,0.7583,0.7209,1891,2057,324
+2,9 descriptors,0.0032,0.9825,0.9838,1,9,71
+2,descriptors + fingerprints,0.0032,0.7763,0.7437,1884,2057,367
+3,9 descriptors,0.0032,0.9457,0.9442,0,9,67
+3,descriptors + fingerprints,0.0032,0.802,0.7721,1884,2057,293
+4,9 descriptors,0.0032,0.9404,0.9392,0,9,76
+4,descriptors + fingerprints,0.0032,0.7438,0.7137,1886,2057,343
+5,9 descriptors,0.0032,1.0081,1.0093,0,9,76
+5,descriptors + fingerprints,0.0032,0.8158,0.7752,1888,2057,349
+6,9 descriptors,0.01,1.0556,1.0483,1,9,66
+6,descriptors + fingerprints,0.0032,0.881,0.8634,1896,2057,335
+7,9 descriptors,0.01,0.9936,0.9894,1,9,67
+7,descriptors + fingerprints,0.0032,0.8271,0.8054,1892,2057,317
+8,9 descriptors,0.01,1.0792,1.0782,0,9,66
+8,descriptors + fingerprints,0.0032,0.9053,0.8892,1905,2057,276
+9,9 descriptors,0.01,1.0025,0.999,1,9,61
+9,descriptors + fingerprints,0.0032,0.8288,0.8118,1894,2057,275
+10,9 descriptors,0.01,1.0162,1.0195,0,9,69
+10,descriptors + fingerprints,0.0032,0.8089,0.8022,1892,2057,363

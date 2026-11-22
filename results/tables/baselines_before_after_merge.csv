@@ -1,0 +1,8 @@
+model,"RMSE, proposal (1,117)","SD, proposal","RMSE, final (1,115)","SD, final",change
+Mean predictor,2.099,0.081,2.132,0.064,0.033
+logP only (least squares),1.179,0.069,1.205,0.062,0.026
+"ESOL equation (Delaney, 2004)",0.909,0.043,0.929,0.033,0.02
+ESOL refit (Crippen logP),1.028,0.061,1.052,0.045,0.024
+Linear regression (8 descriptors),0.976,0.06,1.003,0.043,0.027
+Ridge (8 descriptors),0.976,0.06,1.003,0.043,0.027
+kNN (8 descriptors),0.767,0.05,0.803,0.032,0.036

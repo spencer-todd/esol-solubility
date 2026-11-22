@@ -1,0 +1,11 @@
+model,rings,n_molecules,above_control_median,share_above,verdict
+XGBoost,0,275,78,0.284,better
+XGBoost,1,338,168,0.497,no clear difference
+XGBoost,2,193,103,0.534,no clear difference
+XGBoost,3,101,70,0.693,no clear difference
+XGBoost,4,77,50,0.649,no clear difference
+kNN,0,275,101,0.367,no clear difference
+kNN,1,338,158,0.467,no clear difference
+kNN,2,193,97,0.503,no clear difference
+kNN,3,101,76,0.752,worse
+kNN,4,77,40,0.519,no clear difference

@@ -1,0 +1,13 @@
+,,train_rmse,train_rmse,test_rmse,test_rmse
+,,mean,std,mean,std
+model,n_train,,,,
+Ridge (descriptors + fingerprints),178,0.422,0.086,0.911,0.048
+Ridge (descriptors + fingerprints),357,0.43,0.07,0.855,0.051
+Ridge (descriptors + fingerprints),535,0.426,0.067,0.828,0.048
+Ridge (descriptors + fingerprints),714,0.441,0.06,0.795,0.05
+Ridge (descriptors + fingerprints),892,0.447,0.058,0.79,0.057
+XGBoost,178,0.027,0.006,0.771,0.045
+XGBoost,357,0.061,0.009,0.699,0.036
+XGBoost,535,0.094,0.015,0.67,0.02
+XGBoost,714,0.123,0.017,0.626,0.025
+XGBoost,892,0.149,0.016,0.607,0.036

@@ -1,0 +1,21 @@
+seed,feature_set,MW,LogP,TPSA,HBD,HBA,RotBonds,AromRings,Halogens,AromProp
+1,9 descriptors,True,True,True,True,True,True,True,True,True
+1,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+2,9 descriptors,True,True,True,True,True,False,True,True,True
+2,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+3,9 descriptors,True,True,True,True,True,True,True,True,True
+3,descriptors + fingerprints,True,True,True,True,True,False,True,True,True
+4,9 descriptors,True,True,True,True,True,True,True,True,True
+4,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+5,9 descriptors,True,True,True,True,True,True,True,True,True
+5,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+6,9 descriptors,True,True,True,True,True,False,True,True,True
+6,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+7,9 descriptors,True,True,True,True,True,False,True,True,True
+7,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+8,9 descriptors,True,True,True,True,True,True,True,True,True
+8,descriptors + fingerprints,True,True,True,True,True,False,True,True,True
+9,9 descriptors,True,True,True,True,True,False,True,True,True
+9,descriptors + fingerprints,True,True,True,True,True,True,True,True,True
+10,9 descriptors,True,True,True,True,True,True,True,True,True
+10,descriptors + fingerprints,True,True,True,True,True,True,True,True,True

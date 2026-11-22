@@ -1,0 +1,13 @@
+model,molecules,phosphorus,n_molecules,rmse,mean_error
+"ESOL equation (Delaney, 2004)",all,False,944,0.926,0.067
+"ESOL equation (Delaney, 2004)",all,True,40,0.94,-0.28
+"ESOL equation (Delaney, 2004)",without the 4 P molecules of the worst-10,False,944,0.926,0.067
+"ESOL equation (Delaney, 2004)",without the 4 P molecules of the worst-10,True,36,0.673,-0.156
+ESOL refit (Crippen logP),all,False,944,1.014,0.034
+ESOL refit (Crippen logP),all,True,40,1.528,-0.886
+ESOL refit (Crippen logP),without the 4 P molecules of the worst-10,False,944,1.014,0.034
+ESOL refit (Crippen logP),without the 4 P molecules of the worst-10,True,36,1.168,-0.702
+XGBoost,all,False,944,0.581,-0.014
+XGBoost,all,True,40,1.036,-0.291
+XGBoost,without the 4 P molecules of the worst-10,False,944,0.581,-0.014
+XGBoost,without the 4 P molecules of the worst-10,True,36,0.695,-0.16

@@ -1,0 +1,11 @@
+split,uncertainty_group,rmse,mean_tree_sd
+random,1,0.349,0.402
+random,2,0.437,0.553
+random,3,0.587,0.667
+random,4,0.694,0.8
+random,5,1.031,1.064
+scaffold,1,0.765,0.591
+scaffold,2,0.871,0.743
+scaffold,3,0.876,0.847
+scaffold,4,0.858,0.958
+scaffold,5,0.929,1.19

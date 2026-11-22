@@ -1,0 +1,9 @@
+model,random: no ring,random: benzene,"random: other ring, in training","random: other ring, not in training",random: other ring (all),"scaffold: other ring, not in training"
+"ESOL equation (Delaney, 2004)",0.834,0.797,0.938,1.146,1.023,1.018
+ESOL refit (Crippen logP),1.079,0.788,1.01,1.3,1.13,1.132
+Ridge (8 descriptors),1.028,0.792,0.964,1.208,1.066,1.08
+kNN (8 descriptors),0.789,0.635,0.781,0.99,0.868,1.03
+Ridge (descriptors + fingerprints),0.793,0.568,0.767,0.996,0.863,0.972
+Kernel ridge,0.574,0.48,0.68,0.847,0.749,0.962
+Random forest,0.641,0.519,0.689,0.785,0.728,0.87
+XGBoost,0.495,0.511,0.633,0.771,0.69,0.834

@@ -1,0 +1,8 @@
+model,test_rmse_04,test_rmse_grouped,change_mean,change_sd,new_setting,lower,higher,verdict,test_minus_cv_shuffled,test_minus_cv_grouped,grouped_cv_closer
+Ridge (8 descriptors),1.0796,1.1003,0.0208,0.0624,10,4,6,no clear difference,0.1035,-0.0387,4
+kNN (8 descriptors),1.0299,1.0652,0.0354,0.0704,9,3,6,no clear difference,0.2478,-0.0105,10
+Ridge (descriptors + fingerprints),0.9723,0.9473,-0.025,0.0277,10,8,2,helps,0.1855,-0.0335,9
+Kernel ridge,0.9618,0.835,-0.1268,0.0903,10,10,0,helps,0.2617,0.0004,10
+Random forest,0.8705,0.8681,-0.0024,0.0169,8,4,4,no clear difference,0.2043,0.0049,10
+XGBoost,0.8342,0.8394,0.0051,0.012,9,3,6,no clear difference,0.2076,-0.0125,9
+XGBoost (9 descriptors),0.8797,0.8763,-0.0033,0.0421,9,5,4,no clear difference,0.1942,-0.0391,9

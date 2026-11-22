@@ -1,0 +1,11 @@
+seed,best_params,gamma,alpha,test_rmse
+1,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.88722
+2,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.84262
+3,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.84037
+4,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.80764
+5,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.84988
+6,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.78626
+7,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.83608
+8,"{'krr__regressor__alpha': 0.01, 'krr__regressor__gamma': 0.01}",0.01,0.01,0.88404
+9,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.87232
+10,"{'krr__regressor__alpha': 0.03162277660168379, 'krr__regressor__gamma': 0.01}",0.01,0.03162,0.70792

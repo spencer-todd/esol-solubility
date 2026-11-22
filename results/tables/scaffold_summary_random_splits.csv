@@ -1,0 +1,11 @@
+model,rmse_mean,rmse_sd,mae_mean,r2_mean,diff_vs_knn_mean,diff_vs_knn_sd,wins_vs_knn
+Mean predictor,2.132,0.064,1.68,-0.001,1.33,0.072,0.0
+"ESOL equation (Delaney, 2004)",0.929,0.033,0.713,0.81,0.126,0.043,0.0
+ESOL refit (Crippen logP),1.052,0.045,0.81,0.755,0.249,0.053,0.0
+Ridge (8 descriptors),1.003,0.043,0.779,0.777,0.2,0.053,0.0
+kNN (8 descriptors),0.803,0.032,0.568,0.858,,,
+Ridge (descriptors + fingerprints),0.79,0.057,0.593,0.861,-0.013,0.069,7.0
+Kernel ridge,0.654,0.016,0.46,0.906,-0.149,0.035,10.0
+Random forest,0.667,0.032,0.482,0.902,-0.136,0.042,10.0
+XGBoost,0.607,0.036,0.445,0.918,-0.196,0.056,10.0
+XGBoost (9 descriptors),0.707,0.029,0.51,0.889,-0.096,0.033,10.0

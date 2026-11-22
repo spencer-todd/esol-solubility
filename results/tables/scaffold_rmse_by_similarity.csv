@@ -1,0 +1,17 @@
+split,model,similarity_bin,rmse,n_molecules
+random,XGBoost,0–0.3,0.921,167
+random,XGBoost,0.3–0.5,0.704,636
+random,XGBoost,0.5–0.7,0.491,957
+random,XGBoost,0.7–1.0,0.54,470
+random,kNN (8 descriptors),0–0.3,1.234,167
+random,kNN (8 descriptors),0.3–0.5,0.938,636
+random,kNN (8 descriptors),0.5–0.7,0.668,957
+random,kNN (8 descriptors),0.7–1.0,0.65,470
+scaffold,XGBoost,0–0.3,0.982,437
+scaffold,XGBoost,0.3–0.5,0.881,1027
+scaffold,XGBoost,0.5–0.7,0.699,589
+scaffold,XGBoost,0.7–1.0,0.539,177
+scaffold,kNN (8 descriptors),0–0.3,1.27,437
+scaffold,kNN (8 descriptors),0.3–0.5,1.027,1027
+scaffold,kNN (8 descriptors),0.5–0.7,0.912,589
+scaffold,kNN (8 descriptors),0.7–1.0,0.727,177

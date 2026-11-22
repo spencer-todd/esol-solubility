@@ -1,0 +1,9 @@
+model,family,n_molecules,above_control_median,share_above
+XGBoost,steroid,40,28,0.7
+XGBoost,PCB,31,14,0.452
+XGBoost,large PAH,18,9,0.5
+XGBoost,sugar or polyol,10,7,0.7
+kNN,steroid,40,16,0.4
+kNN,PCB,31,8,0.258
+kNN,large PAH,18,5,0.278
+kNN,sugar or polyol,10,9,0.9

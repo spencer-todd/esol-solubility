@@ -1,0 +1,24 @@
+model,group,mean,std
+Kernel ridge,AromRings + AromProp,0.149,0.018
+Kernel ridge,"Fingerprints (2,048 bits)",0.439,0.017
+Kernel ridge,HBD,0.071,0.011
+Kernel ridge,Halogens,0.04,0.01
+Kernel ridge,MW,0.338,0.022
+Kernel ridge,RotBonds,0.035,0.014
+Kernel ridge,TPSA + HBA,0.134,0.019
+Kernel ridge,logP,0.908,0.054
+XGBoost,AromRings + AromProp,0.092,0.025
+XGBoost,"Fingerprints (2,048 bits)",0.211,0.023
+XGBoost,HBD,0.005,0.005
+XGBoost,Halogens,0.032,0.007
+XGBoost,MW,0.277,0.031
+XGBoost,RotBonds,0.02,0.007
+XGBoost,TPSA + HBA,0.236,0.016
+XGBoost,logP,0.973,0.115
+XGBoost (9 descriptors),AromRings + AromProp,0.079,0.045
+XGBoost (9 descriptors),HBD,0.013,0.007
+XGBoost (9 descriptors),Halogens,0.058,0.014
+XGBoost (9 descriptors),MW,0.324,0.048
+XGBoost (9 descriptors),RotBonds,0.04,0.021
+XGBoost (9 descriptors),TPSA + HBA,0.283,0.065
+XGBoost (9 descriptors),logP,1.159,0.277

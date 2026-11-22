@@ -1,0 +1,25 @@
+model,family,twin,count,rmse
+"ESOL equation (Delaney, 2004)",PCB,False,3,2.011
+"ESOL equation (Delaney, 2004)",PCB,True,65,0.828
+"ESOL equation (Delaney, 2004)",large PAH,False,16,2.104
+"ESOL equation (Delaney, 2004)",large PAH,True,22,2.093
+"ESOL equation (Delaney, 2004)",other,False,1597,0.868
+"ESOL equation (Delaney, 2004)",other,True,410,1.023
+"ESOL equation (Delaney, 2004)",steroid,False,86,0.825
+"ESOL equation (Delaney, 2004)",sugar or polyol,False,31,0.589
+Ridge (8 descriptors),PCB,False,3,1.317
+Ridge (8 descriptors),PCB,True,65,0.613
+Ridge (8 descriptors),large PAH,False,16,1.422
+Ridge (8 descriptors),large PAH,True,22,1.587
+Ridge (8 descriptors),other,False,1597,1.004
+Ridge (8 descriptors),other,True,410,1.011
+Ridge (8 descriptors),steroid,False,86,0.824
+Ridge (8 descriptors),sugar or polyol,False,31,1.169
+kNN (8 descriptors),PCB,False,3,3.274
+kNN (8 descriptors),PCB,True,65,0.557
+kNN (8 descriptors),large PAH,False,16,0.775
+kNN (8 descriptors),large PAH,True,22,0.663
+kNN (8 descriptors),other,False,1597,0.867
+kNN (8 descriptors),other,True,410,0.439
+kNN (8 descriptors),steroid,False,86,0.748
+kNN (8 descriptors),sugar or polyol,False,31,1.128

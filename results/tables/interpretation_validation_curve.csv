@@ -1,0 +1,211 @@
+model,seed,value,chosen,train_rmse,val_rmse,train_mae,val_mae
+XGBoost,1,1.0,False,0.5787,0.731,0.4583,0.5679
+XGBoost,1,2.0,False,0.4014,0.6589,0.3172,0.5019
+XGBoost,1,3.0,False,0.2926,0.6336,0.2292,0.475
+XGBoost,1,4.0,False,0.2166,0.6223,0.168,0.4628
+XGBoost,1,6.0,True,0.1262,0.6231,0.0958,0.4572
+XGBoost,1,8.0,False,0.076,0.6293,0.0562,0.4576
+XGBoost,1,10.0,False,0.0487,0.6335,0.035,0.4609
+XGBoost,1,12.0,False,0.0342,0.641,0.0238,0.4653
+Ridge (descriptors + fingerprints),1,0.001,False,0.1246,1.7879,0.0241,1.254
+Ridge (descriptors + fingerprints),1,0.0032,False,0.1263,1.5301,0.026,1.0731
+Ridge (descriptors + fingerprints),1,0.01,False,0.1296,1.3041,0.0296,0.9237
+Ridge (descriptors + fingerprints),1,0.0316,False,0.135,1.1447,0.037,0.8219
+Ridge (descriptors + fingerprints),1,0.1,False,0.1452,1.0404,0.0539,0.7555
+Ridge (descriptors + fingerprints),1,0.3162,False,0.1713,0.9551,0.0906,0.696
+Ridge (descriptors + fingerprints),1,1.0,False,0.2329,0.8806,0.1552,0.6442
+Ridge (descriptors + fingerprints),1,3.1623,False,0.3391,0.8304,0.2479,0.6137
+Ridge (descriptors + fingerprints),1,10.0,True,0.4787,0.8133,0.363,0.6087
+Ridge (descriptors + fingerprints),1,31.6228,False,0.6298,0.8275,0.4831,0.628
+Ridge (descriptors + fingerprints),1,100.0,False,0.7788,0.8782,0.6037,0.6778
+Ridge (descriptors + fingerprints),1,316.2278,False,0.9477,0.9919,0.7449,0.7802
+Ridge (descriptors + fingerprints),1,1000.0,False,1.1995,1.2189,0.9545,0.9709
+XGBoost,2,1.0,False,0.5717,0.7388,0.4501,0.565
+XGBoost,2,2.0,False,0.3996,0.6669,0.3143,0.5028
+XGBoost,2,3.0,False,0.2988,0.6454,0.23,0.4767
+XGBoost,2,4.0,False,0.2252,0.6386,0.1718,0.4658
+XGBoost,2,6.0,True,0.1305,0.6349,0.099,0.4601
+XGBoost,2,8.0,False,0.0784,0.6403,0.0583,0.4638
+XGBoost,2,10.0,False,0.0508,0.6406,0.037,0.462
+XGBoost,2,12.0,False,0.0365,0.6442,0.0254,0.4644
+Ridge (descriptors + fingerprints),2,0.001,False,0.1337,1.6805,0.0307,1.2026
+Ridge (descriptors + fingerprints),2,0.0032,False,0.1351,1.4073,0.0324,1.0191
+Ridge (descriptors + fingerprints),2,0.01,False,0.1376,1.2162,0.0357,0.8843
+Ridge (descriptors + fingerprints),2,0.0316,False,0.1423,1.0857,0.0427,0.7954
+Ridge (descriptors + fingerprints),2,0.1,False,0.1513,1.0042,0.0586,0.7414
+Ridge (descriptors + fingerprints),2,0.3162,False,0.1746,0.9419,0.093,0.6983
+Ridge (descriptors + fingerprints),2,1.0,False,0.2325,0.8809,0.1556,0.6585
+Ridge (descriptors + fingerprints),2,3.1623,False,0.336,0.8308,0.2473,0.6246
+Ridge (descriptors + fingerprints),2,10.0,True,0.476,0.809,0.3613,0.6123
+Ridge (descriptors + fingerprints),2,31.6228,False,0.6298,0.824,0.4835,0.631
+Ridge (descriptors + fingerprints),2,100.0,False,0.7819,0.8795,0.6077,0.6823
+Ridge (descriptors + fingerprints),2,316.2278,False,0.9517,0.9958,0.751,0.7867
+Ridge (descriptors + fingerprints),2,1000.0,False,1.2009,1.2209,0.957,0.9744
+XGBoost,3,1.0,False,0.5717,0.7553,0.4531,0.5709
+XGBoost,3,2.0,False,0.4002,0.6792,0.3158,0.5039
+XGBoost,3,3.0,False,0.2984,0.6592,0.2329,0.4853
+XGBoost,3,4.0,False,0.2253,0.6551,0.1741,0.4758
+XGBoost,3,6.0,True,0.1314,0.6517,0.0998,0.4729
+XGBoost,3,8.0,False,0.0805,0.6551,0.0594,0.4783
+XGBoost,3,10.0,False,0.052,0.6579,0.0372,0.4805
+XGBoost,3,12.0,False,0.0365,0.6586,0.0252,0.4816
+Ridge (descriptors + fingerprints),3,0.001,False,0.1149,1.6905,0.0267,1.2443
+Ridge (descriptors + fingerprints),3,0.0032,False,0.1173,1.3621,0.0284,1.0206
+Ridge (descriptors + fingerprints),3,0.01,False,0.1213,1.144,0.0318,0.8602
+Ridge (descriptors + fingerprints),3,0.0316,False,0.1271,1.0283,0.0388,0.7674
+Ridge (descriptors + fingerprints),3,0.1,False,0.1363,0.9679,0.0542,0.7114
+Ridge (descriptors + fingerprints),3,0.3162,False,0.1598,0.9127,0.088,0.6693
+Ridge (descriptors + fingerprints),3,1.0,False,0.2196,0.8526,0.15,0.629
+Ridge (descriptors + fingerprints),3,3.1623,False,0.3259,0.8065,0.2418,0.6014
+Ridge (descriptors + fingerprints),3,10.0,True,0.4662,0.7917,0.3571,0.599
+Ridge (descriptors + fingerprints),3,31.6228,False,0.6174,0.813,0.4769,0.6191
+Ridge (descriptors + fingerprints),3,100.0,False,0.7693,0.874,0.5965,0.6728
+Ridge (descriptors + fingerprints),3,316.2278,False,0.9451,0.9997,0.74,0.7823
+Ridge (descriptors + fingerprints),3,1000.0,False,1.2021,1.233,0.9485,0.974
+XGBoost,4,1.0,False,0.5899,0.7482,0.4611,0.5712
+XGBoost,4,2.0,False,0.407,0.6675,0.3157,0.4961
+XGBoost,4,3.0,False,0.3051,0.6377,0.2346,0.4709
+XGBoost,4,4.0,False,0.2295,0.6289,0.1759,0.4633
+XGBoost,4,6.0,True,0.1327,0.6245,0.1006,0.4571
+XGBoost,4,8.0,False,0.0814,0.6283,0.0605,0.4575
+XGBoost,4,10.0,False,0.0552,0.632,0.0398,0.4609
+XGBoost,4,12.0,False,0.0408,0.6329,0.0283,0.4638
+Ridge (descriptors + fingerprints),4,0.001,False,0.1202,1.9496,0.0294,1.364
+Ridge (descriptors + fingerprints),4,0.0032,False,0.1222,1.5571,0.0314,1.1033
+Ridge (descriptors + fingerprints),4,0.01,False,0.1258,1.2739,0.035,0.9247
+Ridge (descriptors + fingerprints),4,0.0316,False,0.1315,1.1064,0.042,0.8165
+Ridge (descriptors + fingerprints),4,0.1,False,0.1419,1.0097,0.0579,0.7456
+Ridge (descriptors + fingerprints),4,0.3162,False,0.1672,0.9309,0.0922,0.6896
+Ridge (descriptors + fingerprints),4,1.0,False,0.2272,0.8562,0.1537,0.633
+Ridge (descriptors + fingerprints),4,3.1623,False,0.3323,0.8041,0.2446,0.5953
+Ridge (descriptors + fingerprints),4,10.0,True,0.4743,0.7904,0.3603,0.5916
+Ridge (descriptors + fingerprints),4,31.6228,False,0.6319,0.8153,0.4841,0.6172
+Ridge (descriptors + fingerprints),4,100.0,False,0.7878,0.8788,0.6097,0.6786
+Ridge (descriptors + fingerprints),4,316.2278,False,0.9591,0.9994,0.7531,0.7869
+Ridge (descriptors + fingerprints),4,1000.0,False,1.2079,1.2269,0.9523,0.9697
+XGBoost,5,1.0,False,0.5777,0.7225,0.4543,0.562
+XGBoost,5,2.0,False,0.4086,0.6552,0.3216,0.5035
+XGBoost,5,3.0,False,0.3039,0.6349,0.2365,0.4815
+XGBoost,5,4.0,False,0.2268,0.6274,0.1747,0.4704
+XGBoost,5,6.0,True,0.1305,0.6257,0.099,0.4652
+XGBoost,5,8.0,False,0.0799,0.6349,0.059,0.4698
+XGBoost,5,10.0,False,0.0541,0.6347,0.039,0.4709
+XGBoost,5,12.0,False,0.0396,0.6423,0.0277,0.4766
+Ridge (descriptors + fingerprints),5,0.001,False,0.1519,1.9198,0.0326,1.4111
+Ridge (descriptors + fingerprints),5,0.0032,False,0.154,1.4975,0.0347,1.1244
+Ridge (descriptors + fingerprints),5,0.01,False,0.157,1.2452,0.0386,0.9412
+Ridge (descriptors + fingerprints),5,0.0316,False,0.1622,1.0809,0.0461,0.811
+Ridge (descriptors + fingerprints),5,0.1,False,0.1715,0.972,0.0624,0.7247
+Ridge (descriptors + fingerprints),5,0.3162,False,0.1925,0.8946,0.0954,0.6666
+Ridge (descriptors + fingerprints),5,1.0,False,0.2425,0.83,0.1545,0.6221
+Ridge (descriptors + fingerprints),5,3.1623,False,0.336,0.7867,0.2436,0.5953
+Ridge (descriptors + fingerprints),5,10.0,True,0.4688,0.7761,0.3574,0.5931
+Ridge (descriptors + fingerprints),5,31.6228,False,0.6194,0.8003,0.4784,0.6159
+Ridge (descriptors + fingerprints),5,100.0,False,0.7708,0.8623,0.6013,0.6719
+Ridge (descriptors + fingerprints),5,316.2278,False,0.9409,0.9831,0.7401,0.7759
+Ridge (descriptors + fingerprints),5,1000.0,False,1.1938,1.2146,0.9437,0.9622
+XGBoost,6,1.0,False,0.5714,0.7335,0.447,0.5652
+XGBoost,6,2.0,False,0.3982,0.6556,0.3098,0.4941
+XGBoost,6,3.0,False,0.2982,0.627,0.2283,0.4675
+XGBoost,6,4.0,False,0.2232,0.6218,0.1717,0.454
+XGBoost,6,6.0,True,0.1304,0.6203,0.0994,0.4569
+XGBoost,6,8.0,False,0.0789,0.6226,0.0591,0.4569
+XGBoost,6,10.0,False,0.0529,0.618,0.0386,0.4553
+XGBoost,6,12.0,False,0.0369,0.6198,0.026,0.4583
+Ridge (descriptors + fingerprints),6,0.001,False,0.1121,1.477,0.0261,1.0997
+Ridge (descriptors + fingerprints),6,0.0032,False,0.1135,1.2024,0.0272,0.8972
+Ridge (descriptors + fingerprints),6,0.01,False,0.1155,1.0427,0.0297,0.7719
+Ridge (descriptors + fingerprints),6,0.0316,False,0.1186,0.9701,0.0356,0.7115
+Ridge (descriptors + fingerprints),6,0.1,False,0.1254,0.9251,0.0495,0.6758
+Ridge (descriptors + fingerprints),6,0.3162,False,0.1475,0.8792,0.0809,0.6412
+Ridge (descriptors + fingerprints),6,1.0,False,0.2059,0.8303,0.14,0.6086
+Ridge (descriptors + fingerprints),6,3.1623,True,0.3119,0.7933,0.2292,0.5847
+Ridge (descriptors + fingerprints),6,10.0,False,0.4554,0.7828,0.3429,0.585
+Ridge (descriptors + fingerprints),6,31.6228,False,0.6114,0.8038,0.4644,0.6102
+Ridge (descriptors + fingerprints),6,100.0,False,0.764,0.8627,0.5885,0.667
+Ridge (descriptors + fingerprints),6,316.2278,False,0.9356,0.9839,0.7331,0.7745
+Ridge (descriptors + fingerprints),6,1000.0,False,1.1894,1.2156,0.9384,0.9603
+XGBoost,7,1.0,False,0.5663,0.7233,0.4477,0.5615
+XGBoost,7,2.0,False,0.3972,0.6508,0.3117,0.4962
+XGBoost,7,3.0,False,0.292,0.6303,0.2261,0.4744
+XGBoost,7,4.0,False,0.2212,0.6194,0.1701,0.4613
+XGBoost,7,6.0,True,0.1282,0.6168,0.0969,0.4523
+XGBoost,7,8.0,False,0.0759,0.6204,0.0562,0.4542
+XGBoost,7,10.0,False,0.05,0.6295,0.036,0.4576
+XGBoost,7,12.0,False,0.0347,0.6292,0.024,0.4584
+Ridge (descriptors + fingerprints),7,0.001,False,0.1263,1.3538,0.0293,1.0039
+Ridge (descriptors + fingerprints),7,0.0032,False,0.1271,1.2156,0.0304,0.9011
+Ridge (descriptors + fingerprints),7,0.01,False,0.1287,1.1041,0.0329,0.814
+Ridge (descriptors + fingerprints),7,0.0316,False,0.132,1.0259,0.0392,0.7488
+Ridge (descriptors + fingerprints),7,0.1,False,0.1396,0.972,0.0542,0.7048
+Ridge (descriptors + fingerprints),7,0.3162,False,0.1619,0.9171,0.0871,0.6651
+Ridge (descriptors + fingerprints),7,1.0,False,0.2188,0.8547,0.1471,0.6239
+Ridge (descriptors + fingerprints),7,3.1623,False,0.3206,0.804,0.2361,0.5888
+Ridge (descriptors + fingerprints),7,10.0,True,0.4602,0.7849,0.348,0.5828
+Ridge (descriptors + fingerprints),7,31.6228,False,0.6166,0.8036,0.4692,0.6054
+Ridge (descriptors + fingerprints),7,100.0,False,0.7719,0.8639,0.5923,0.663
+Ridge (descriptors + fingerprints),7,316.2278,False,0.9452,0.9865,0.7349,0.7715
+Ridge (descriptors + fingerprints),7,1000.0,False,1.2021,1.2224,0.9483,0.9677
+XGBoost,8,1.0,False,0.591,0.7549,0.4663,0.5837
+XGBoost,8,2.0,False,0.4167,0.6825,0.3303,0.5214
+XGBoost,8,3.0,False,0.3073,0.6572,0.242,0.496
+XGBoost,8,4.0,False,0.2334,0.648,0.1817,0.4801
+XGBoost,8,6.0,False,0.1379,0.6448,0.1055,0.4716
+XGBoost,8,8.0,True,0.0839,0.6406,0.0631,0.4684
+XGBoost,8,10.0,False,0.0543,0.646,0.0398,0.474
+XGBoost,8,12.0,False,0.0368,0.6469,0.0264,0.4748
+Ridge (descriptors + fingerprints),8,0.001,False,0.1204,1.6625,0.028,1.1559
+Ridge (descriptors + fingerprints),8,0.0032,False,0.1215,1.467,0.0294,1.0298
+Ridge (descriptors + fingerprints),8,0.01,False,0.1243,1.2621,0.0327,0.8985
+Ridge (descriptors + fingerprints),8,0.0316,False,0.1296,1.115,0.0399,0.7995
+Ridge (descriptors + fingerprints),8,0.1,False,0.1393,1.0164,0.056,0.7364
+Ridge (descriptors + fingerprints),8,0.3162,False,0.1634,0.9301,0.0889,0.6807
+Ridge (descriptors + fingerprints),8,1.0,False,0.2195,0.8461,0.1476,0.6267
+Ridge (descriptors + fingerprints),8,3.1623,False,0.3178,0.7828,0.2339,0.5862
+Ridge (descriptors + fingerprints),8,10.0,True,0.4517,0.7597,0.3431,0.5743
+Ridge (descriptors + fingerprints),8,31.6228,False,0.6011,0.7791,0.4621,0.5967
+Ridge (descriptors + fingerprints),8,100.0,False,0.7511,0.8396,0.5809,0.6491
+Ridge (descriptors + fingerprints),8,316.2278,False,0.9253,0.9648,0.7252,0.7582
+Ridge (descriptors + fingerprints),8,1000.0,False,1.1889,1.2072,0.9389,0.9555
+XGBoost,9,1.0,False,0.5838,0.7332,0.4557,0.5629
+XGBoost,9,2.0,False,0.4035,0.6532,0.3162,0.4891
+XGBoost,9,3.0,False,0.2959,0.6204,0.2294,0.4525
+XGBoost,9,4.0,False,0.2238,0.612,0.1727,0.4456
+XGBoost,9,6.0,True,0.1291,0.6129,0.0988,0.4436
+XGBoost,9,8.0,False,0.079,0.6195,0.0591,0.4467
+XGBoost,9,10.0,False,0.0519,0.6219,0.0378,0.4483
+XGBoost,9,12.0,False,0.0373,0.6255,0.0263,0.4532
+Ridge (descriptors + fingerprints),9,0.001,False,0.1523,1.8643,0.0325,1.3198
+Ridge (descriptors + fingerprints),9,0.0032,False,0.1555,1.3998,0.0343,1.0181
+Ridge (descriptors + fingerprints),9,0.01,False,0.1585,1.1737,0.0378,0.8685
+Ridge (descriptors + fingerprints),9,0.0316,False,0.1626,1.0596,0.0453,0.7854
+Ridge (descriptors + fingerprints),9,0.1,False,0.171,0.9876,0.0625,0.7343
+Ridge (descriptors + fingerprints),9,0.3162,False,0.1928,0.9178,0.0972,0.6819
+Ridge (descriptors + fingerprints),9,1.0,False,0.2453,0.8451,0.1578,0.6276
+Ridge (descriptors + fingerprints),9,3.1623,False,0.3406,0.7917,0.2452,0.5879
+Ridge (descriptors + fingerprints),9,10.0,True,0.4727,0.7738,0.356,0.582
+Ridge (descriptors + fingerprints),9,31.6228,False,0.6205,0.7956,0.4767,0.6092
+Ridge (descriptors + fingerprints),9,100.0,False,0.7703,0.8593,0.5968,0.6649
+Ridge (descriptors + fingerprints),9,316.2278,False,0.9433,0.983,0.7365,0.769
+Ridge (descriptors + fingerprints),9,1000.0,False,1.201,1.2174,0.9509,0.9657
+XGBoost,10,1.0,False,0.5705,0.7277,0.4489,0.5628
+XGBoost,10,2.0,False,0.3972,0.6413,0.313,0.4899
+XGBoost,10,3.0,False,0.2959,0.6158,0.2303,0.4647
+XGBoost,10,4.0,False,0.2216,0.6115,0.1712,0.4552
+XGBoost,10,6.0,True,0.1287,0.5978,0.097,0.4366
+XGBoost,10,8.0,False,0.0806,0.6026,0.0592,0.4375
+XGBoost,10,10.0,False,0.0549,0.6065,0.0394,0.4427
+XGBoost,10,12.0,False,0.0404,0.6068,0.0278,0.4421
+Ridge (descriptors + fingerprints),10,0.001,False,0.1486,1.9704,0.0322,1.3931
+Ridge (descriptors + fingerprints),10,0.0032,False,0.1506,1.5887,0.0341,1.1337
+Ridge (descriptors + fingerprints),10,0.01,False,0.1538,1.3058,0.038,0.9369
+Ridge (descriptors + fingerprints),10,0.0316,False,0.1593,1.1132,0.0456,0.8011
+Ridge (descriptors + fingerprints),10,0.1,False,0.1694,0.9902,0.0621,0.7156
+Ridge (descriptors + fingerprints),10,0.3162,False,0.1917,0.9035,0.096,0.6562
+Ridge (descriptors + fingerprints),10,1.0,False,0.2439,0.8307,0.1559,0.6109
+Ridge (descriptors + fingerprints),10,3.1623,True,0.3393,0.7827,0.244,0.5841
+Ridge (descriptors + fingerprints),10,10.0,False,0.4722,0.7724,0.3553,0.585
+Ridge (descriptors + fingerprints),10,31.6228,False,0.621,0.799,0.4766,0.6105
+Ridge (descriptors + fingerprints),10,100.0,False,0.7693,0.861,0.5981,0.6671
+Ridge (descriptors + fingerprints),10,316.2278,False,0.9391,0.9816,0.7389,0.7723
+Ridge (descriptors + fingerprints),10,1000.0,False,1.1951,1.2155,0.9443,0.962

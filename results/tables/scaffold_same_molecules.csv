@@ -1,0 +1,17 @@
+model,scaffold in training (random split),n_molecules,rmse_random,rmse_scaffold,rise
+"ESOL equation (Delaney, 2004)",True,303,0.953,0.953,0.0
+"ESOL equation (Delaney, 2004)",False,202,1.153,1.153,0.0
+ESOL refit (Crippen logP),True,303,1.019,1.033,0.013
+ESOL refit (Crippen logP),False,202,1.294,1.318,0.024
+Ridge (8 descriptors),True,303,0.968,0.998,0.03
+Ridge (8 descriptors),False,202,1.213,1.239,0.026
+kNN (8 descriptors),True,303,0.784,1.096,0.312
+kNN (8 descriptors),False,202,0.956,0.997,0.041
+Ridge (descriptors + fingerprints),True,303,0.753,0.94,0.187
+Ridge (descriptors + fingerprints),False,202,0.996,1.01,0.014
+Kernel ridge,True,303,0.669,1.008,0.339
+Kernel ridge,False,202,0.839,0.92,0.081
+Random forest,True,303,0.685,0.918,0.232
+Random forest,False,202,0.761,0.811,0.05
+XGBoost,True,303,0.629,0.861,0.231
+XGBoost,False,202,0.761,0.802,0.042

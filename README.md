@@ -106,13 +106,15 @@ All random seeds are fixed (`RANDOM_SEED = 1` in `src/esol_data.py`), so a new r
 - `results/eda_report.html`: the automatic EDA report. It is 10 MB, so GitHub does not show it. Download it and open it in a web browser.
 - `results/figures/`: the file names start with the topic (`eda_`, `baselines_`, `models_`, `scaffold_`, `uncertainty_`, `interpretation_`), except `pipeline_diagram.png`.
 
-The tables and figures of the paper:
+The table and figures in the main text of the paper:
 
 | In the paper | File | Made in |
 |---|---|---|
+| Figure 1 | `results/figures/pipeline_diagram.png` (and `.pdf`) | notebook 05, section 13 |
 | Table 1 | `results/tables/paper_table1.csv` | notebook 04, section 6.1 |
-| Figure 1 | `results/figures/scaffold_random_vs_scaffold.png` (and `.pdf`) | notebook 04, section 9 |
-| Figure 2 | `results/figures/interpretation_importance_and_shap.png` (and `.pdf`) | notebook 05, section 13 |
+| Figure 2 | `results/figures/models_twin_vs_no_twin.png` | notebook 03, section 6 |
+| Figure 3 | `results/figures/scaffold_random_vs_scaffold.png` (and `.pdf`) | notebook 04, section 9 |
+| Figure 4 | `results/figures/interpretation_importance_and_shap.png` (and `.pdf`) | notebook 05, section 13 |
 
 ## Predicting new molecules
 

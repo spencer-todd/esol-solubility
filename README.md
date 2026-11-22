@@ -2,11 +2,12 @@
 
 CHE1147 (Chemical Data Science and Engineering), University of Toronto, Fall 2026. Team 9: Rojin Ostadsharif Memar and Spencer Todd.
 
-This repository holds all the code, data and results for our final project. We predict the aqueous solubility (log S, in log mol/L) of the molecules in the ESOL dataset (Delaney, 2004) from their structure. The file has 1,128 entries, which are 1,115 unique molecules after we merge duplicates. We compare kernel ridge, a random forest and XGBoost with simple baselines, mainly a k-nearest neighbours (kNN) model on eight molecular descriptors. We test the baselines and the three models on 10 stratified random splits and on 10 scaffold splits. In a scaffold split, every test molecule has a Bemis–Murcko scaffold (its ring systems and the linkers between them) that is not in the training set. We then look at which inputs the models rely on, which molecules they predict worst, and how well they can flag an unreliable prediction.
+This repository holds all the code, data and results for our final project. We predict the aqueous solubility (log S, in log mol/L) of the molecules in the ESOL dataset (Delaney, 2004) from their structure. The file has 1,128 entries, which are 1,115 unique molecules after we merge duplicates. We compare kernel ridge, a random forest and XGBoost with simple baselines, mainly a k-nearest neighbours (kNN) model on eight molecular descriptors. We test the baselines and the three models on 10 stratified random splits, and all of them except the logP-only baseline on 10 scaffold splits. In a scaffold split, every test molecule has a Bemis–Murcko scaffold (its ring systems and the linkers between them) that is not in the training set. We then look at which inputs the models rely on, which molecules they predict worst, and how well they can flag an unreliable prediction.
 
 ## Main results
 
 - On the 10 random splits, XGBoost (descriptors + fingerprints) has a test root mean squared error (RMSE) of 0.607 ± 0.036 log mol/L against 0.803 ± 0.032 for kNN, and it is lower in 10 of 10 splits (`03_models.ipynb`).
+- On the random splits, kNN looks strong partly because of descriptor twins, training molecules with the same 8 descriptors as a test molecule. kNN's test RMSE is 0.468 on molecules with a twin in the training set and 0.876 on molecules without one (mean of 10 splits, notebook 03, section 6).
 - On the 10 scaffold splits, XGBoost has 0.834 ± 0.051 against 1.030 ± 0.057 for kNN, again lower in 10 of 10 splits (`04_scaffold_split_and_uncertainty.ipynb`).
 - The RMSE of XGBoost rises from 0.607 (all random test molecules) to 0.690 (the molecules of the random splits that have a ring scaffold other than benzene) to 0.834 (scaffold splits). So part of the rise comes from which molecules are tested and part from the new scaffolds (notebook 04, section 6).
 - These results do not depend on how we tuned the models on the scaffold splits. When we tune again with cross-validation folds grouped by scaffold, XGBoost still beats kNN in 10 of 10 scaffold splits, and its rise from 0.690 is about the same (notebook 05, section 4.4). Kernel ridge improves the most with these folds (scaffold test RMSE 0.962 to 0.835) and then reaches about the same RMSE as XGBoost tuned the same way (0.839).
@@ -36,7 +37,7 @@ esol-solubility/
 │   └── 05_interpretation.ipynb
 └── results/
     ├── eda_report.html   automatic exploratory data analysis (EDA) report (ydata-profiling)
-    ├── figures/          every figure, as PNG (Figures 1 and 2 and the pipeline diagram also as PDF)
+    ├── figures/          every figure, as PNG (Figures 1, 3 and 4 of the paper also as PDF)
     ├── tables/           every table and all test-set predictions, as CSV
     └── models/
         └── xgboost_final.joblib   the final XGBoost model
@@ -70,7 +71,7 @@ RDKit 2026.03.6 has ready-made packages for Apple Silicon Macs, Linux (x86_64 an
 
 ## How to run the training and analysis
 
-Run the notebooks in order, 01 to 05, because each one reads tables that the earlier ones save in `results/tables/`. You can open them in JupyterLab:
+Run the notebooks in order, 01 to 05, because notebooks 03 to 05 read tables that the earlier ones save in `results/tables/`. You can open them in JupyterLab:
 
 ```bash
 uv run jupyter lab
@@ -84,13 +85,13 @@ uv run jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor
 
 | Notebook | What it does | Reads | Run time |
 |---|---|---|---|
-| `01_data_and_eda.ipynb` | Cleans the data (merges duplicates, 1,128 entries to 1,115 molecules), calculates the descriptors and explores the data (EDA, principal component analysis) | `data/` only | about 30 s |
-| `02_baselines.ipynb` | Tests the baselines on 10 stratified random splits: the mean predictor, logP only, the ESOL equation (as published and refitted), ridge and kNN, and looks at which molecules are descriptor twins | `data/` only | about 20 s |
-| `03_models.ipynb` | Tunes and tests kernel ridge, the random forest and XGBoost on the same 10 random splits, and compares them with kNN | tables of notebook 02 | about 45 min |
+| `01_data_and_eda.ipynb` | Cleans the data (merges duplicates, 1,128 entries to 1,115 molecules), calculates the descriptors and explores the data (EDA, principal component analysis) | `data/` only | about 1 min |
+| `02_baselines.ipynb` | Tests the baselines on 10 stratified random splits: the mean predictor, logP only, the ESOL equation (as published and refitted), ridge and kNN, and looks at which molecules are descriptor twins | `data/` only | about 30 s |
+| `03_models.ipynb` | Tunes and tests kernel ridge, the random forest and XGBoost on the same 10 random splits, and compares them with kNN | tables of notebook 02 | about 1 h |
 | `04_scaffold_split_and_uncertainty.ipynb` | Builds 10 scaffold splits and tests all models on them. Compares the error with the similarity to the training set, estimates the uncertainty (random forest trees and a Gaussian process) and makes Table 1 of the paper | tables of notebooks 02 and 03 | about 20 min |
-| `05_interpretation.ipynb` | Runs the bootstrap, learning and validation curves, checks of the tuning (budget, folds grouped by scaffold, default XGBoost, number of trees), permutation importance, SHAP (SHapley Additive exPlanations) and the worst-predicted families, measures the training time, and trains and saves the final model | tables of notebooks 02, 03 and 04 | about 2.5 h (about 25 min with `RUN_TUNING_CHECKS = False`) |
+| `05_interpretation.ipynb` | Runs the bootstrap, learning and validation curves, checks of the tuning (budget, folds grouped by scaffold, default XGBoost, number of trees), permutation importance, SHAP (SHapley Additive exPlanations) and the worst-predicted families, measures the training time, and trains and saves the final model | tables of notebooks 02, 03 and 04 | about 2 h 45 min (about 20 min with `RUN_TUNING_CHECKS = False`) |
 
-The whole run takes about 3.5 hours. The run times were measured on a Mac with an Apple M5 chip (10 cores, 16 GB of memory). The searches use all cores, so a computer with fewer cores takes longer. Two shorter options:
+The whole run takes about 4 hours. The run times were measured on a Mac with an Apple M5 chip (10 cores, 16 GB of memory). The searches use all cores, so a computer with fewer cores takes longer. Two shorter options:
 - In `05_interpretation.ipynb`, set `RUN_TUNING_CHECKS = False` in section 0. The notebook then reads the saved results of its three big tuning checks (sections 4.2, 4.3 and 4.4) instead of running them.
 - For a quick check that the environment works (under 2 minutes), run notebooks 01 and 02, then the `predict_log_s()` example below.
 

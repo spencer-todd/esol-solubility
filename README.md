@@ -2,6 +2,8 @@
 
 CHE1147 (Chemical Data Science and Engineering), University of Toronto, Fall 2026. Team 9: Rojin Ostadsharif Memar and Spencer Todd.
 
+The title of our paper is *Beyond Nearest Neighbours: Generalization of Machine Learning Models for Aqueous Solubility to Unseen Scaffolds*.
+
 This repository holds all the code, data and results for our final project. We predict the aqueous solubility (log S, in log mol/L) of the molecules in the ESOL dataset (Delaney, 2004) from their structure. The file has 1,128 entries, which are 1,115 unique molecules after we merge duplicates. We compare kernel ridge, a random forest and XGBoost with simple baselines, mainly a k-nearest neighbours (kNN) model on eight molecular descriptors. We test the baselines and the three models on 10 stratified random splits, and all of them except the logP-only baseline on 10 scaffold splits. In a scaffold split, every test molecule has a Bemis–Murcko scaffold (its ring systems and the linkers between them) that is not in the training set. We then look at which inputs the models rely on, which molecules they predict worst, and how well they can flag an unreliable prediction.
 
 ## Main results

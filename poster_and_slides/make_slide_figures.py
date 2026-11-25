@@ -185,7 +185,7 @@ save(fig, 's_importance.png')
 sys.path.insert(0, os.path.join(REPO, 'src'))
 from esol_data import RANDOM_SEED, TARGET, prepare_esol, stratified_split
 
-os.chdir(os.path.join(REPO, 'notebooks'))   # the data path in src is relative to the notebooks folder
+os.chdir(os.path.join(REPO, 'notebooks'))   # run from the notebooks folder, as the notebooks do (src/esol_data.py finds the data file itself)
 df_train, df_test = stratified_split(prepare_esol(), RANDOM_SEED)
 rho = stats.spearmanr(df_train['LogP'], df_train[TARGET])[0]
 fig, ax = plt.subplots(figsize=(5.35, 5.7))

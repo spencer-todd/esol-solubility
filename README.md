@@ -42,7 +42,7 @@ esol-solubility/
 │   └── make_slide_figures.py    slide-sized copies of five poster figures, for the presentation slides
 └── results/
     ├── eda_report.html   automatic exploratory data analysis (EDA) report (ydata-profiling)
-    ├── figures/          every figure, as PNG (the paper figures also as PDF, except the molecule drawings of Figure A6.3, which are SVG)
+    ├── figures/          every figure, as PNG (the paper figures also as PDF, except the molecule drawings of Figure A6.3, which are `interpretation_worst_neighbours.svg`)
     │   ├── poster/       the poster figures, as PNG and PDF
     │   └── slides/       the slide figures, as PNG and PDF
     ├── tables/           every table and all test-set predictions, as CSV
@@ -102,7 +102,7 @@ The whole run takes about 4 hours. The run times were measured on a Mac with an 
 - In `05_interpretation.ipynb`, set `RUN_TUNING_CHECKS = False` in section 0. The notebook then reads the saved results of its three big tuning checks (sections 4.2, 4.3 and 4.4) instead of running them.
 - For a quick check that the environment works (under 2 minutes), run notebooks 01 and 02, then the `predict_log_s()` example below.
 
-All random seeds are fixed (`RANDOM_SEED = 1` in `src/esol_data.py`), so a new run gives the same tables and figures. Only the measured times change (the timing prints and `training_time.csv`).
+All random seeds are fixed (`RANDOM_SEED = 1` in `src/esol_data.py`), so a new run gives the same tables and figures. Only the measured times (the timing prints and `training_time.csv`) and the date inside `eda_report.html` change.
 
 ## Where to find the results
 

@@ -2,7 +2,7 @@ model,fit_seconds_median
 ESOL refit (Crippen logP),0.001
 Ridge (8 descriptors),0.001
 kNN (8 descriptors),0.001
-Ridge (descriptors + fingerprints),0.035
-Kernel ridge,0.065
-Random forest,2.722
+Ridge (descriptors + fingerprints),0.074
+Kernel ridge,0.05
+Random forest,2.691
 XGBoost,1.725

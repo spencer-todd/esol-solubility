@@ -1,6 +1,6 @@
 # Predicting aqueous solubility (log S) of the ESOL molecules
 
-CHE1147 (Chemical Data Science and Engineering), University of Toronto, Fall 2026. Team 9: Rojin Ostadsharif Memar and Spencer Todd.
+CHE1147 (Chemical Data Science and Engineering), University of Toronto, Fall 2026. Team 9: Spencer Todd and Rojin Ostadsharif Memar.
 
 The title of our paper is *Beyond Nearest Neighbours: Generalization of Machine Learning Models for Aqueous Solubility to Unseen Scaffolds*.
 
@@ -37,9 +37,14 @@ esol-solubility/
 │   ├── 03_models.ipynb
 │   ├── 04_scaffold_split_and_uncertainty.ipynb
 │   └── 05_interpretation.ipynb
+├── poster_and_slides/
+│   ├── make_poster_figures.py   the figures of the poster, from the tables in results/tables
+│   └── make_slide_figures.py    slide-sized copies of five poster figures, for the presentation slides
 └── results/
     ├── eda_report.html   automatic exploratory data analysis (EDA) report (ydata-profiling)
-    ├── figures/          every figure, as PNG (Figures 1, 3 and 4 of the paper also as PDF)
+    ├── figures/          every figure, as PNG (the paper figures also as PDF, except the molecule drawings of Figure A6.3, which are SVG)
+    │   ├── poster/       the poster figures, as PNG and PDF
+    │   └── slides/       the slide figures, as PNG and PDF
     ├── tables/           every table and all test-set predictions, as CSV
     └── models/
         └── xgboost_final.joblib   the final XGBoost model
@@ -88,7 +93,7 @@ uv run jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor
 | Notebook | What it does | Reads | Run time |
 |---|---|---|---|
 | `01_data_and_eda.ipynb` | Cleans the data (merges duplicates, 1,128 entries to 1,115 molecules), calculates the descriptors and explores the data (EDA, principal component analysis) | `data/` only | about 1 min |
-| `02_baselines.ipynb` | Tests the baselines on 10 stratified random splits: the mean predictor, logP only, the ESOL equation (as published and refitted), ridge and kNN, and looks at which molecules are descriptor twins | `data/` only | about 30 s |
+| `02_baselines.ipynb` | Tests the baselines on 10 stratified random splits: the mean predictor, logP only, the ESOL equation (as published and refit), ridge and kNN, and looks at which molecules are descriptor twins | `data/` only | about 30 s |
 | `03_models.ipynb` | Tunes and tests kernel ridge, the random forest and XGBoost on the same 10 random splits, and compares them with kNN | tables of notebook 02 | about 1 h |
 | `04_scaffold_split_and_uncertainty.ipynb` | Builds 10 scaffold splits and tests all models on them. Compares the error with the similarity to the training set, estimates the uncertainty (random forest trees and a Gaussian process) and makes Table 1 of the paper | tables of notebooks 02 and 03 | about 20 min |
 | `05_interpretation.ipynb` | Runs the bootstrap, learning and validation curves, checks of the tuning (budget, folds grouped by scaffold, default XGBoost, number of trees), permutation importance, SHAP (SHapley Additive exPlanations) and the worst-predicted families, measures the training time, and trains and saves the final model | tables of notebooks 02, 03 and 04 | about 2 h 45 min (about 20 min with `RUN_TUNING_CHECKS = False`) |
@@ -107,7 +112,7 @@ All random seeds are fixed (`RANDOM_SEED = 1` in `src/esol_data.py`), so a new r
 - `results/tables/tuning_check_*.csv`: the checks of the tuning in notebook 05 (section 4). They cover the bigger searches on the random and scaffold splits, the tuning with folds grouped by scaffold, default against tuned XGBoost, and 100 against 300 trees in the random forest.
 - `results/models/xgboost_final.joblib`: the final model, XGBoost on the 9 descriptors (the 8 descriptors plus the aromatic proportion) and Morgan fingerprints. It is trained on all 1,115 molecules with the settings that cross-validation chose most often in notebook 03 (notebook 05, section 12).
 - `results/eda_report.html`: the automatic EDA report. It is 10 MB, so GitHub does not show it. Download it and open it in a web browser.
-- `results/figures/`: the file names start with the topic (`eda_`, `baselines_`, `models_`, `scaffold_`, `uncertainty_`, `interpretation_`), except `pipeline_diagram.png`.
+- `results/figures/`: the file names start with the topic (`eda_`, `baselines_`, `models_`, `scaffold_`, `uncertainty_`, `interpretation_`), except `pipeline_diagram.png`. The figures of the poster and the slides are in its subfolders `poster/` and `slides/`.
 
 The table and figures in the main text of the paper:
 
@@ -115,9 +120,18 @@ The table and figures in the main text of the paper:
 |---|---|---|
 | Figure 1 | `results/figures/pipeline_diagram.png` (and `.pdf`) | notebook 05, section 13 |
 | Table 1 | `results/tables/paper_table1.csv` | notebook 04, section 6.1 |
-| Figure 2 | `results/figures/models_twin_vs_no_twin.png` | notebook 03, section 6 |
+| Figure 2 | `results/figures/scaffold_twins_and_steps.png` (and `.pdf`) | notebook 04, section 9 (panel (a) redraws the twin chart of notebook 03, section 6) |
 | Figure 3 | `results/figures/scaffold_random_vs_scaffold.png` (and `.pdf`) | notebook 04, section 9 |
 | Figure 4 | `results/figures/interpretation_importance_and_shap.png` (and `.pdf`) | notebook 05, section 13 |
+
+Two scripts in `poster_and_slides/` draw the figures of the poster and the presentation slides at the size they are shown. For example, Figure 4 of the poster (the test RMSE of six models and the splits each won against kNN) is made only there. The scripts fit no model. They read the tables in `results/tables/` (and the dataset, for the figure of log S against logP), so run them after the notebooks, from the `esol-solubility` folder:
+
+```bash
+uv run python poster_and_slides/make_poster_figures.py
+uv run python poster_and_slides/make_slide_figures.py
+```
+
+They save each figure as PNG and PDF in `results/figures/poster/` and `results/figures/slides/`. They use the Arial font. On a computer without Arial, matplotlib uses its default font instead, so the text looks a little different.
 
 ## Predicting new molecules
 
